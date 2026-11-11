@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,51 +18,102 @@
       <a href="lista.html" class="btn btn-success">Listar Palavras</a>
       <a href="jogo.html" class="btn btn-danger">Iniciar Jogo</a>
 
-      <form>
-        <div class="row mt-3 py-2 corFundo">
-            <div class="col-sm-4">
-                <h2 class="text-end mt-1">
-                    <label for="inLetra">Informe uma Letra: </label>
-                </h2>
-            </div>
-        </div>
-
-        <div> 
-            <div class="col-sm-2">
-            <input type="text" class="from-control mt-1" id="inLetra" maxlength="1 required autofocus">
-            </div>
-            <div class="col-sm-6">
-            <input type="submit" class="btn btn-primary mt-1" value="Jogar" id="btJogar">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-8">
-                <h2 class="mt-2">Palavra: <span id="outPalavra" class="entre-letras text-primary"></span></h2>
-                <h2>Nro de Chances: <span id="outChances" class="text-danger">4</span></h2>
-                <h2>Erros: <span id="outErros" class="entre-letras text-danger"></span></h2>
-                <h2 id="outMensagemFinal"></h2>
-            </div>
-        </div>
-            <div class="col-sm-4">
-                <h3 class="mt-2">Situação Jogador: </h3>
-                <img src="./img/status4.jpg" alt="Situacao Jogador" class="img-fluid">
-            </div>
-        
-        <div class="row corFundo p-3">
-            <div class="col-sm-12">
-                <input type="button" value="Ver Dica" class="btn btn-primary" id="btVerDica"> <span id="outDica">*Custo: 1 Chance</span>
-            </div>
-        </div>
-      </form>
       
+<form id="frmJogo">
+
+    <div class="row mt-3 py-2 corFundo align-items-center">
+
+        <div class="col-sm-4">
+            <label for="inLetra" class="form-label"> Informe uma Letra: </label>
+        </div>
+
+        <div class="col-sm-2">
+            <input
+                type="text"
+                class="form-control"
+                id="inLetra"
+                maxlength="1"
+                required
+                autofocus
+                autocomplete="off"
+            >
+        </div>
+
+        <div class="col-sm-6">
+            <input
+                type="submit"
+                class="btn btn-primary"
+                value="Jogar"
+                id="btJogar"
+            >
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+
+        <div class="col-sm-8">
+
+            <h2>
+                Palavra:
+                <span id="outPalavra" class="text-primary"></span>
+            </h2>
+
+            <h2>
+                Nro de Chances:
+                <span id="outChances" class="text-danger">4</span>
+            </h2>
+
+            <h2>
+                Erros:
+                <span id="outErros" class="text-danger"></span>
+            </h2>
+
+            <h2 id="outMensagemFinal"></h2>
+
+        </div>
+
+        <div class="col-sm-4">
+
+            <h3>Situação Jogador:</h3>
+
+            <img
+                src="./img/status4.jpg"
+                alt="Situação do jogador"
+                class="img-fluid"
+                id="imgStatus"
+            >
+
+        </div>
+
+    </div>
+
+    <div class="row corFundo p-3 mt-3">
+
+        <div class="col-sm-12">
+
+            <input
+                type="button"
+                value="Ver Dica"
+                class="btn btn-primary"
+                id="btVerDica"
+            >
+
+            <span id="outDica">*Custo: 1 Chance</span>
+
+        </div>
+
+    </div>
+
+</form>
+    
     </div>
 
     <script src="./js/jogo.js"></script>
     
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+        <script src="./js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
