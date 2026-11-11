@@ -39,7 +39,7 @@ ckMostrar.checked ? montarTabela() : window.location.reload()
 
 tbPalavra.addEventListener("click", () => {
 //se a classe do elemento alvo clicado contém excluir
-        if(e.target.classlist.container("exclui")) {
+        if(e.target.classlist.contains("exclui")) {
             // acessar o elemento avô do elemento alvo e obtem o 1 filho
             const palavra = e.target.parentElement.parentElement.children[0].innerText;
 
@@ -58,7 +58,7 @@ tbPalavra.addEventListener("click", () => {
                         for(let i=1; i < tbPalavra.rows.length; i++) {
 
                             palavra.push(tbPalavra.rows[i].cells[0].innerText)
-                            dica.push(tbPalavra.row[i].cells[1].innerText)
+                            dica.push(tbPalavra.rows[i].cells[1].innerText)
                         }
 
                         //salva o conteudo no localstorage sem a linha removida
